@@ -1,0 +1,1072 @@
+/* CSS Document of universal */
+body h3 {
+    text-align: center;
+    color: #2c3531;
+}
+
+body a:hover, body a:focus {
+    text-decoration: none;
+}
+
+body {
+    background-color: #f3f5f7;
+}
+
+@media screen and (max-width: 1200px) {
+    #categories .cat-product {
+        float: none;
+        width: inherit;
+    }
+
+    #categories #cat-info {
+        width: 50%;
+        float: none;
+        position: relative;
+        top: inherit;
+        right: inherit;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+.crs-ctrl span {
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 37px;
+}
+
+.crs-ctrl span:hover {
+    text-shadow: 10px 8px 10px rgba(0, 0, 0, 0.56863);
+}
+
+.crs-ctrl #left {
+    left: 50px;
+}
+
+.crs-ctrl #right {
+    right: 50px;
+}
+
+.buttona {
+    background-color: #001100;
+    color: white;
+    padding: 3px 0;
+    border-radius: 10px;
+    font-size: 29px;
+    display: block;
+    text-align: center;
+    width: 171px;
+    margin: 0 auto;
+}
+
+.buttona:hover, .buttona:focus {
+    background-color: #0099FF;
+    color: #2c3531;
+    text-decoration: none;
+}
+
+/*end of universal */
+body > div > a > img {
+    display: none;
+}
+
+/*Home's style */
+/*brand introduction */
+.brand-intro .brand-img {
+    background-image: url(images/ribbon.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: 100% 100%;
+    padding: 38px 0 78px;
+    margin-top: 35px;
+}
+
+.brand-intro .brand-img #text {
+    width: 405px;
+    display: block;
+    margin: 0 auto;
+}
+
+.brand-intro .brand-img h3 {
+    margin: 0;
+    font-size: 26px;
+    padding-top: 20px;
+    letter-spacing: 5px;
+}
+
+.brand-intro .brand-img p {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.brand-intro .brand-img .text-ribbon {
+    margin: 0 auto;
+}
+
+.brand-intro .brand-img .text-ribbon div#left {
+    float: left;
+    width: 71%;
+}
+
+.brand-intro .brand-img .text-ribbon div#left p {
+    text-align: left;
+    position: relative;
+    right: 0;
+    margin: 0;
+}
+
+.brand-intro .brand-img .text-ribbon div#right {
+    float: right;
+    width: 29%;
+}
+
+.brand-intro .brand-img .text-ribbon div#right a {
+    color: white;
+    border: 1px solid white;
+    padding: 10px 0;
+    border-radius: 10px;
+    width: 114px;
+    display: block;
+    text-align: center;
+    font-size: 17px;
+    background-color: #001100
+}
+
+.brand-intro .brand-img .text-ribbon div#right a:hover {
+    color: #e4e3e3;
+    border-color: #e4e3e3;
+    text-decoration: none;
+}
+
+.brand-intro .brand-img .text-ribbon div#right a:focus {
+    text-decoration: none;
+}
+
+.brand-intro .brand-img .text-ribbon div#right a:active {
+    color: #cecdcd;
+    border-color: #cecdcd;
+}
+
+.brand-intro .brand-img .text-ribbon:after {
+    display: block;
+    width: 0;
+    height: 0;
+    content: "";
+    clear: both;
+}
+
+.brand-intro #logos ul {
+    padding: 35px 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 70%;
+}
+
+.brand-intro #logos ul li {
+    display: inline-block;
+    width: 32.33%;
+}
+
+.brand-intro #logos ul li img {
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+}
+
+.brand-intro .owl-carousel {
+    padding: 35px 40px;
+}
+
+.brand-intro .owl-carousel .owl-item img {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.brand-intro .owl-carousel .owl-item.product {
+    width: 100%;
+}
+
+.brand-intro .owl-theme .owl-nav {
+    margin: 0;
+}
+
+.brand-intro .owl-theme .owl-nav [class*=owl-] {
+    background: none;
+    color: transparent;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    opacity: 0.5;
+}
+
+.brand-intro .owl-theme .owl-nav [class*=owl-]:hover {
+    opacity: 1;
+}
+
+.brand-intro .owl-theme .owl-nav .owl-next {
+    right: 10px;
+}
+
+.brand-intro .owl-theme .owl-nav .owl-prev {
+    left: 10px;
+}
+
+.brand-intro .product-slide.brands:focus {
+    background-color: #feecd9;
+}
+
+.brand-intro .product-slide > a > p {
+    visibility: hidden;
+    padding: 22.5px 0;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+}
+
+.brand-intro .product-slide:hover {
+    background-color: #feecd9;
+}
+
+.brand-intro .product-slide:hover > a > p {
+    visibility: visible;
+    background-color: #2c3531;
+    color: #fff;
+}
+
+.brand-intro .product-slide:hover > a > p:hover, .brand-intro .product-slide:hover > a > p:focus {
+    background-color: #ffcb9a;
+    color: #2c3531;
+    text-decoration: none;
+}
+
+/*categories */
+#categories ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#categories ul:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    clear: left;
+}
+
+#categories #seemore {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    background-color: #2c3531;
+    padding: 20px;
+    justify-content: center;
+}
+
+#categories #seemore p, #categories #seemore a {
+    padding: 10px;
+    font-size: 21px;
+}
+
+#categories #seemore p {
+    color: #fff;
+    margin: 0;
+}
+
+#categories #seemore a {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+#categories #seemore a:hover {
+    color: #e4e3e3;
+    border-color: #e4e3e3;
+}
+
+#categories .cat-product {
+    float: left;
+    width: 50%;
+    position: relative;
+}
+
+#categories .cat-product p {
+    position: absolute;
+    background-color: rgba(254, 236, 217, 0.62);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 160px;
+    font-size: 23px;
+    text-align: center;
+    color: #2c3531;
+    transition: 0.6s;
+    z-index: 1;
+}
+
+#categories .cat-product img {
+    width: 100%;
+    transition: 0.6s;
+}
+
+#categories .cat-product a:hover p {
+    width: 260px;
+    font-size: 25px;
+}
+
+#categories .cat-product a:hover img {
+    filter: blur(2px);
+}
+
+/*news */
+.container-news {
+    clear: left;
+}
+
+.container-news .title {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.container-news .row-news {
+    margin-bottom: 80px;
+}
+
+.container-news .row-news .news-items {
+    float: left;
+    width: 33.33333%;
+    padding: 0 20px;
+    transition: transform 0.5s;
+}
+
+.container-news .row-news .news-items img {
+    width: 100%;
+    height: 200px;
+}
+
+.container-news .row-news .news-items h3 {
+    position: static;
+}
+
+.container-news .row-news .news-items p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.container-news .row-news:after {
+    content: "";
+    display: block;
+    clear: left;
+    width: 0;
+    height: 0;
+}
+
+/*end of Home's style */
+/********************************************************************************************** */
+/*Brands' Style */
+/*producs.html use some lines below either */
+#brand-wrapper {
+    /*background-image: url("images/brands-background.jpg");*/
+    background-position-y: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#brand-wrapper > img {
+    width: 100%;
+}
+
+#brand-wrapper.product {
+    padding-bottom: 180px;
+    background: none;
+}
+
+#all-item > p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.brands-product {
+    padding: 35px 0 0px;
+}
+
+.brands-product .product-items {
+    float: left;
+    width: 24%;
+    /*text-align: center;*/
+    padding: 10px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 2%;
+    transition: transform 0.5s;
+}
+
+.brands-product .product-items p {
+    color: #3f3f3f;
+    font-size: 15px;
+}
+
+.brands-product .product-items span {
+    color: #3f3f3f;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.brands-product .product-items img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.brands-product .related {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.brands-product .related .product-items {
+    float: none;
+}
+
+.brands-product:after {
+    display: block;
+    content: "";
+    clear: left;
+    width: 0;
+    height: 0;
+}
+
+div#seeall {
+    padding: 100px 0 100px;
+}
+
+div#seeall a {
+    clear: left;
+    width: 220px;
+}
+
+#daikin, #lg, #mitsubishi, #panasonic, #samsung, #toshiba {
+    margin-right: 5%;
+    margin-left: 5%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+}
+
+#daikin .product-items, #lg .product-items, #mitsubishi .product-items, #panasonic .product-items, #samsung .product-items, #toshiba .product-items {
+    float: none;
+}
+
+/* End brands' style */
+/* Products.html */
+/*div#products.container {*/
+/*    margin-left: 0;*/
+/*}*/
+
+#products-row {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#products-row .brands-product {
+    float: left;
+    width: 85%;
+}
+
+#products-row #switch-bar {
+    float: right;
+    width: 14%;
+    position: relative;
+    margin-top: 40px;
+    border-radius: 2%;
+    background-color: white;
+}
+
+#products-row #switch-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#products-row #switch-bar ul li {
+    position: relative;
+    padding-left: 17px;
+    font-size: 14px;
+    color: #0071ff;
+}
+
+#products-row #switch-bar ul li input {
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#products-row #switch-bar img {
+    width: 100px;
+}
+
+#products-row #switch-bar h4 {
+    font-size: 18px;
+}
+
+#products-row #switch-bar:before {
+    content: "";
+    border-left: solid 1px #eeebe6;
+    position: absolute;
+    height: 100%;
+    left: 0px;
+}
+
+#products-row:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    clear: left;
+}
+
+@media screen and (max-width: 830px) {
+    #products-row #switch-bar, #products-row .brands-product {
+        width: 100%;
+    }
+
+    #products-row #switch-bar * {
+        text-align: center;
+    }
+
+    #products-row #switch-bar ul li {
+        display: inline-block;
+    }
+}
+
+/*end products */
+/* detail */
+.product-wraper > img {
+    width: 100%;
+}
+
+.product-wraper > h3 {
+    font-size: 26px;
+}
+
+.product-wraper > p {
+    font-size: 18px;
+}
+
+.product-wraper .detail-row h3 {
+    font-size: 26px;
+}
+
+.product-wraper .detail-row article {
+    float: left;
+    width: 75%;
+    padding: 0 7%;
+    text-align: justify;
+}
+
+.product-wraper .detail-row article p {
+    font-size: 18px;
+}
+
+.product-wraper .detail-row article img {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.product-wraper .detail-row #right-side {
+    float: right;
+    width: 25%;
+}
+
+.product-wraper .detail-row #right-side h3 {
+    text-align: left;
+}
+
+.product-wraper .detail-row #right-side p {
+    font-size: 18px;
+}
+
+.product-wraper .detail-row #right-side ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.product-wraper .detail-row #right-side ul li {
+    padding: 10px 0;
+    position: relative;
+}
+
+.product-wraper .detail-row #right-side ul li span {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.product-wraper .detail-row #right-side ul li p {
+    display: inline-block;
+    margin: 0;
+    width: 60%;
+    font-size: 18px;
+}
+
+.product-wraper .detail-row #right-side ul li:before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: block;
+    border-top: 1px solid #dfdfdf;
+}
+
+.product-wraper .detail-row #right-side a {
+    color: #2c3531;
+    font-size: 22px;
+}
+
+.product-wraper .detail-row #right-side a:hover {
+    color: #04acef;
+}
+
+.product-wraper .detail-row #right-side a:hover h3 {
+    color: #04acef;
+}
+
+.product-wraper .detail-row:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    clear: both;
+}
+
+/*end detail */
+/*compare */
+.compare-wraper {
+    margin-bottom: 50px;
+}
+
+.compare-wraper h3 {
+    font-size: 26px;
+}
+
+.header-row img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+
+.header-row p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.header-row .criteria {
+    height: 273px;
+}
+
+.header-row .criteria p {
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.info-row {
+    background-color: #f4f5f7;
+}
+
+.info-row ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.info-row ul li {
+    padding: 10px 0;
+    color: #2c3531;
+}
+
+.info-row ul li + li {
+    border-top: #c9caca solid 1px;
+}
+
+.info-row .criteria li, .info-row .productcp li {
+    padding-left: 10px;
+}
+
+.info-row a {
+    margin-bottom: 10px;
+}
+
+.header-row .criteria, .header-row .productcp, .info-row .criteria, .info-row .productcp {
+    float: left;
+}
+
+.header-row .criteria, .info-row .criteria {
+    width: 10%;
+}
+
+.header-row .productcp, .info-row .productcp {
+    width: 30%;
+}
+
+.header-row:after, .info-row:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    clear: left;
+}
+
+.productcp {
+    border-left: 1px solid #c9caca;
+}
+
+/*end compare */
+/*news page */
+.news-wrapper p {
+    font-size: 18px;
+    text-align: justify;
+    padding: 10px;
+}
+
+.news-wrapper > img {
+    width: 100%;
+}
+
+.news-wrapper .container.news {
+    max-width: 600px;
+}
+
+.news-wrapper > .container .news-row {
+    margin-top: 40px;
+}
+
+.news-wrapper > .container img {
+    width: 100%;
+}
+
+.news-wrapper > .container .news-left, .news-wrapper > .container .news-right {
+    float: left;
+    width: 50%;
+}
+
+.news-wrapper > .container .news-left div, .news-wrapper > .container .news-right div {
+    float: left;
+    width: 100%;
+}
+
+.news-wrapper > .container div {
+    position: relative;
+}
+
+.news-wrapper > .container div > a h4 {
+    position: absolute;
+    padding: 45px 0;
+    display: block;
+    background-color: rgba(255, 203, 154, 0.65);
+    color: black;
+    font-size: 17px;
+    text-align: center;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.news-wrapper > .container div > a img {
+    transition: 0.6s;
+}
+
+.news-wrapper > .container div > a:hover img {
+    opacity: 0.5;
+}
+
+.news-wrapper .new-detail {
+    padding: 0px 100px;
+}
+
+.news-wrapper .new-detail img {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+}
+
+.news-wrapper #news-footer {
+    margin-top: 40px;
+}
+
+.title-news {
+    float: left;
+}
+
+/*end news page */
+/*contact page */
+.container.contact > h3 {
+    font-size: 26px;
+}
+
+.container.contact .contact-row {
+    padding: 100px 0;
+}
+
+.container.contact .contact-row #info {
+    background-color: #feecd9;
+    float: left;
+    width: 50%;
+    color: #2c3531;
+    padding: 40px 0;
+}
+
+.container.contact .contact-row #info p {
+    padding-left: 40px;
+    font-size: 21px;
+}
+
+.container.contact .contact-row #map {
+    width: 50%;
+    float: left;
+}
+
+.container.contact > p {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 31px;
+    background-color: #feecd9;
+    color: #2c3531;
+}
+
+.container.contact form div {
+    margin-bottom: 30px;
+}
+
+.container.contact form div label {
+    float: left;
+    width: 40%;
+    margin: 0;
+    font-size: 21px;
+    line-height: 50px;
+}
+
+.container.contact form div label span {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    display: block;
+}
+
+.container.contact form div input, .container.contact form div textarea {
+    float: left;
+    width: 55%;
+}
+
+.container.contact form div input {
+    height: 50px;
+}
+
+.container.contact form button {
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 499px) {
+    .container.contact .contact-row #info, .container.contact .contact-row #map {
+        width: 100%;
+    }
+}
+
+/*end contact */
+/*support page */
+#store-locations .panel-group {
+    width: 70%;
+}
+
+#store-locations p {
+    font-size: 17px;
+}
+
+#store-locations .panel-default > .panel-heading {
+    border-color: transparent;
+    padding: 0;
+}
+
+#store-locations .panel-default > .panel-heading a {
+    color: #fff;
+    background-color: #2c3531;
+    padding: 10px 15px;
+    display: block;
+}
+
+/*end support */
+@media screen and (min-width: 768px) {
+    .brand-intro .container {
+        width: 80%;
+    }
+
+    .brand-intro {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    #brand-wrapper.brand-intro .container {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .brand-intro #logos ul li img {
+        width: 75%;
+    }
+
+    .news-wrapper > .container .news-left, .news-wrapper > .container .news-right {
+        width: 100%;
+    }
+
+    #categories .cat-product {
+        width: 100%;
+    }
+
+    .container-news .row-news .news-items {
+        width: 100%;
+    }
+
+    .container-news .row-news .news-items:not(:last-child) {
+        margin-bottom: 35px;
+    }
+
+    .brand-intro .owl-carousel .owl-item img {
+        width: 80%;
+    }
+
+    .brand-intro .brand-img .text-ribbon div#left, .brand-intro .brand-img .text-ribbon div#right {
+        width: 100%;
+    }
+
+    .brands-product {
+        padding: 0;
+    }
+
+    .brands-product .product-items img {
+        width: 100%;
+    }
+
+    .brands-product .product-items {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .brand-intro .owl-carousel .product .product-slide > a > p {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    .brand-intro .brand-img #text {
+        width: 281px;
+    }
+
+    #daikin, #lg, #mitsubishi, #samsung, #panasonic, #toshiba {
+        display: block;
+    }
+
+    #daikin .product-items, #lg .product-items, #mitsubishi .product-items, #samsung .product-items, #panasonic .product-items, #toshiba .product-items {
+        float: left;
+    }
+}
+
+@media screen and (max-width: 368px) {
+    #categories #seemore a {
+        padding: 17px 10px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .product-wraper .detail-row #right-side {
+        width: 263px;
+    }
+
+    .product-wraper .detail-row article {
+        width: calc(100% - 263px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .product-wraper .detail-row #right-side, .product-wraper .detail-row article {
+        width: 100%;
+        float: left;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .news-wrapper > .container div > a h4 {
+        padding: 30px 0;
+    }
+}
+
+.rating .fa {
+    color: #ff6b00;
+}
+
+.container-news .row-news .news-items:hover {
+    transform: translateY(-5px);
+}
+
+.brands-product .product-items:hover {
+
+    transform: translateY(-5px);
+}
+
+/*# sourceMappingURL=style.css.map */
+
+#switch-bar-actype, #switch-bar-brands {
+    padding: 16px;
+    display: inline-table;
+    width: 100%;
+    border-bottom: 2px solid #f3f3f3;
+}
+
+.review_product {
+    display: flex;
+    margin-top: 6px;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.line_break {
+    color: #c4c4c4;
+    padding: 0 8px;
+}
+
+.reviewCount {
+    color: #a6a6a6;
+}
+
+.h3 {
+    font-size: 30px;
+}
+

@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon - Copy.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <title>Cosy Airconditioners</title>
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="navfooter.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="jquery-match-height-master/jquery.matchHeight.js" type="text/javascript"></script>
+</head>
+
+<body>
+<script>
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+            items:4,
+            autoplay: true,
+            dots: false,
+            nav: true,
+            autoplayTimeout: 2000,
+            loop: true
+        });
+    });
+    $(function() {
+        $('.container-news .row-news .news-items h3').matchHeight({
+            byRow: true,
+            property: 'height',
+            target: null,
+            remove: false
+        });
+    });
+</script>
+<nav class="navbar navbar-default navigator fixme">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo" href="#"><img src="images/logo.png" alt=""></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="brands">Brands</a></li>
+                <li><a href="products">Products</a></li>
+                <li><a href="news">News</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                <div id="t2" style="display: inline-block;"><i class="fa fa-search"></i></div>
+            </form>
+        </div>
+    </div>
+</nav>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="images/slide-photo-2.jpg">
+        </div>
+
+        <div class="item">
+            <img src="images/banner6.jpg">
+        </div>
+
+        <div class="item">
+            <img src="images/banner8.png">
+        </div>
+
+    </div>
+
+    <!-- Left and right controls -->
+    <%- include('partials/controls'); %>
+</div>
+
+
+<!--brand introduction-->
+<div class="brand-intro">
+    <div class="container">
+        <div class="brand-img">
+            <div id="text">
+                <h3>FEATURED BRANDS</h3>
+                <div class="text-ribbon">
+                    <div id="left"><p>Find your best products from our outstanding brands</p></div>
+                    <div id="right"><a href="brands">See all brands</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="owl-carousel owl-theme">
+        <div class="product">
+            <div class="product-slide">
+                <a href="products#daikin">
+                    <img src="images/logo-daikin.png" alt="">
+                    <p>Learn more</p>
+                </a>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product-slide">
+                <a href="products#lg">
+                    <img src="images/logo-lg.png" alt="">
+                    <p>Learn more</p>
+                </a>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product-slide">
+                <a href="products#mitsubishi">
+                    <img src="images/logo-mitsubishi.png" alt="">
+                    <p>Learn more</p>
+                </a>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product-slide">
+                <a href="products#panasonic">
+                    <img src="images/logo-panasonic.png" alt="">
+                    <p>Learn more</p>
+                </a>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product-slide">
+                <a href="products#samsung">
+                    <img src="images/logo-samsung.png" alt="">
+                    <p>Learn more</p>
+                </a>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product-slide">
+                <a href="products#toshiba">
+                    <img src="images/logo-toshiba.png" alt="">
+                    <p>Learn more</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--categories of products introduction-->
+<div id="categories">
+    <ul>
+        <li class="cat-product" id="cat1">
+            <a href="products#split"><p>Split<br>Air Conditioner</p>
+                <img src="images/cat1.jpg" alt=""></a>
+        </li>
+        <li class="cat-product" id="cat2">
+            <a href="products#packaged"><p>Packaged Air Conditioner</p>
+                <img src="images/cat2.jpg" alt=""></a>
+        </li>
+        <li class="cat-product" id="cat3">
+            <a href="products#system"><p>Central Air<br>Conditioning<br>System</p>
+                <img src="images/cat3.jpg" alt=""></a>
+        </li>
+        <li class="cat-product" id="cat4">
+            <a href="products#airpu"><p>Air purifier</p>
+                <img src="images/cat4.jpg" alt=""></a>
+        </li>
+    </ul>
+    <div id="seemore">
+        <p>Various type of air conditioners for every purposes</p>
+        <a href="products">See all products</a>
+    </div>
+</div>
+<!--news-->
+<div class="container-news">
+    <div class="title">
+        <h3 class="h3">Latest news</h3>
+    </div>
+    <div class="row-news">
+        <div class="news-items">
+            <a href="news3"><img src="images/11303_dieu-hoa.jpg" alt="">
+                <h3>Air Conditioner Buying Guide: Tips on buying the best air conditioner</h3>
+            </a>
+        </div>
+        <div class="news-items">
+            <a href="news1"><img src="images/new2.jpg" alt="">
+                <h3>Establishment of New Air Conditioner Production Base in Viet Nam</h3>
+            </a>
+        </div>
+        <div class="news-items">
+            <a href="news2"><img src="images/new3.png" alt="">
+                <h3>Samsung Electronics to Launch Wind-Free Air Conditioner at CES 2017</h3>
+            </a>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<div class="footer">
+    <div id="right">
+        <ul id="need">
+            <li><a href="about">About</a></li>
+            <li><a href="support">Support</a></li>
+            <li><a href="sitemap">Sitemap</a></li>
+        </ul>
+        <ul>
+            <li>Follow us:</li>
+            <li><a href="https://www.facebook.com/Cosy-Airconditioners-1853628548262417/"><img src="images/facebook.png" alt=""></a></li>
+            <li><a href="https://www.youtube.com/channel/UCmd_JINRBhK_ikwHaaTIoSA"><img src="images/youtube.png" alt=""></a></li>
+            <li><a href="https://twitter.com/cosyairconditi1"><img src="images/twitter.png" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="copyright" id="left">
+        <p>COSY AIRCONDITIONERS</p>
+        <p>Copyrights © 2021. All Rights Reserved</p>
+    </div>
+</div>
+</body>
+<script src="js/scrollnav.js"></script>
+<script src="js/mtop80.js"></script>
+<script src="owlcarousel/owl.carousel.min.js"></script>
+</html>

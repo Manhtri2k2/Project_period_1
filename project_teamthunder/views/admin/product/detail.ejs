@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/admin/style.css">
+    <%- include('../partial/heads'); %>
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+    <!-- Navbar -->
+    <%- include('../partial/navbar'); %>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <%- include('../partial/left-menu'); %>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>Product detail</h1>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <!-- SELECT2 EXAMPLE -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6"></div>
+                                        <div class="col-sm-12 col-md-6"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <table id="example2" class="table table-bordered table-hover dataTable"
+                                                   role="grid" aria-describedby="example2_info">
+                                                <thead>
+                                                <tr role="row">
+                                                    <th class="sorting_asc text-center" tabindex="0"
+                                                        aria-controls="example2"
+                                                        rowspan="1" colspan="1" aria-sort="ascending">
+                                                        Image
+                                                    </th>
+                                                    <th class="sorting text-center" tabindex="0"
+                                                        aria-controls="example2"
+                                                        rowspan="1" colspan="1">
+                                                        Name
+                                                    </th>
+                                                    <th class="sorting text-center" tabindex="0"
+                                                        aria-controls="example2"
+                                                        rowspan="1" colspan="1">
+                                                        Price
+                                                    </th>
+                                                </tr>
+                                                </thead>
+<!--                                                <tbody>-->
+<!--                                                <tr role="row" class="odd">-->
+<!--                                                    <td class="text-center">-->
+<!--                                                        <img src="http://res.cloudinary.com/hungkito20/image/upload/c_pad,w_500/<%= obj.thumbnail %>"-->
+<!--                                                             alt=""></td>-->
+<!--                                                    <td class="text-center"><%= obj.name %></td>-->
+<!--                                                    <td class="text-center"><%= obj.price %></td>-->
+<!--                                                </tr>-->
+<!--                                                </tbody>-->
+                                                <tr>
+                                                    <td class="text-center"><strong>Images</strong></td>
+                                                    <td class="text-center">
+                                                        <img src="http://res.cloudinary.com/hungkito20/image/upload/c_pad,w_500/<%= obj.thumbnail %>"
+                                                             alt="" style="width: 200px"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>Name</strong></td>
+                                                    <td class="text-center"><%= obj.name %></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>Price</strong></td>
+                                                    <td class="text-center"><%= obj.price %></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>Description</strong></td>
+                                                    <td><%= obj.description %></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>Detail</strong></td>
+                                                    <td><%- obj.detail %></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>Key feature</strong></td>
+                                                    <td class="text-center"><%= obj.key_feature %></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>Applicable room area</strong></td>
+                                                    <td class="text-center"><%= obj.applicable_room_area %></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>Weight</strong></td>
+                                                    <td class="text-center"><%= obj.weight %></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>Dimensions</strong></td>
+                                                    <td class="text-center"><%= obj.dimensions %></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>Document link</strong></td>
+                                                    <td class="text-center"><%= obj.document_link %></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>Status</strong></td>
+                                                    <td class="text-center"><%= obj.status %></td>
+                                                </tr>
+                                            </table>
+                                            <ul class="pagination">
+                                                <button type="submit" class="btn btn-info" style="margin-left: 15px">
+                                                    <a href="/admin/products" style="color: white">List product</a>
+                                                </button>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+            <!-- /.card --><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <%- include('../partial/footer'); %>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<%- include('../partial/script'); %>
+</body>
+</html>

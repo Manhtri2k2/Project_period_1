@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cosy Airconditioners - Panasonic CS-U9TKH-8</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon - Copy.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style-h.css">
+    <link rel="stylesheet" href="navfooter.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-default navigator fixme">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo" href="#"><img src="images/logo.png" alt=""></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="brands">Brands</a></li>
+                <li><a href="products">Products</a></li>
+                <li><a href="news">News</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                <div id="t2" style="display: inline-block;"><i class="fa fa-search"></i></div>
+            </form>
+        </div>
+    </div>
+</nav>
+<!-- Product -->
+<div class="mtop80"></div>
+<div class="product-wraper" >
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" align="center" >
+            <div class="item active">
+                <img src="images/pana9.jpg" >
+            </div>
+
+            <div class="item">
+                <img src="images/pana5.jpg" height="370px" >
+            </div>
+
+            <div class="item">
+                <img src="images/pana4.jpg" >
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <%- include('partials/controls'); %>
+    </div>
+    <h3>Panasonic CS-U9TKH-8<br>
+        Air Conditioner </h3>
+    <div class="detail-row">
+        <div id="right-side">
+            <h3>Key Featured</h3>
+            <p>Energy savings<br>
+                AERO slim design<br>
+                Breathe fresh and clean<br>
+                P-Tech<br>
+                <ul class="info">
+                    <li>
+            <p>Cooling Capacity</p>
+            <span>2.55kW </span>
+            </li>
+            <li>
+                <p>Dimensions</p>
+                <span>295x919x199</span>
+            </li>
+            <li>
+                <p>EER (Cooling, W/W)</p>
+                <span>3.75 W/W</span>
+            </li>
+            </ul>
+            <h3>Price</h3>
+            <p>$550</p>
+            <h3>Brochure</h3>
+            <a href="../../file/panasonic-AC.pdf"><i class="fa fa-download"></i>Download</a><br>
+            <a href="compare-two"><h3>Compare</h3></a>
+        </div>
+        <article>
+            <img src="images/pana3.jpg">
+            <img src="images/pana2.jpg" alt="">
+
+        </article>
+    </div>
+    <div class="brands-product">
+        <h3 style="font-size: 33px">Related Product</h3>
+        <div class="related">
+            <div class="product-items">
+                <a class="buttona" href="samsung-split-ar4000k">
+                    <img src="images/samsung-ar4000k.png" alt="">
+                    <p>Samsung AR4000K 23,200 BTU</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <span>$650</span>
+                </a>
+            </div>
+            <div class="product-items">
+                <a href="lg-split-p12awn-14">
+                    <img src="images/lg4.jpg" alt="">
+                    <p>LG P12AWN-14</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <span>$700</span>
+                </a>
+            </div>
+            <div class="product-items">
+                <a href="toshiba-inverter">
+                    <img src="images/toshiba-inventer-range.jpg" alt="">
+                    <p>Toshiba Inverter Range 2kW-7kW</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <span>$750</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <%- include('partials/comments'); %>
+</div>
+<!-- end product -->
+<!--footer-->
+<div class="footer">
+    <div id="right">
+        <ul id="need">
+            <li><a href="about">About</a></li>
+            <li><a href="support">Support</a></li>
+            <li><a href="sitemap">Sitemap</a></li>
+        </ul>
+        <ul>
+            <li>Follow us:</li>
+            <li><a href="https://www.facebook.com/Cosy-Airconditioners-1853628548262417/"><img src="images/facebook.png" alt=""></a></li>
+            <li><a href="https://www.youtube.com/channel/UCmd_JINRBhK_ikwHaaTIoSA"><img src="images/youtube.png" alt=""></a></li>
+            <li><a href="https://twitter.com/cosyairconditi1"><img src="images/twitter.png" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="copyright" id="left">
+        <p>COSY AIRCONDITIONERS</p>
+        <p>Copyrights © 2020. All Rights Reserved</p>
+    </div>
+</div>
+</body>
+<script src="js/scrollnav.js"></script>
+<script src="js/mtop80.js"></script>
+<script src="js/product-detail.js"></script>
+</html>

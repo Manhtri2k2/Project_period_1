@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('../partial/heads'); %>
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+    <!-- Navbar -->
+    <%- include('../partial/navbar'); %>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <%- include('../partial/left-menu'); %>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>Customer Form</h1>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <!-- /.card -->
+
+                <!-- SELECT2 EXAMPLE -->
+                <form action="/admin/Customers/create" method="post">
+                    <div class="card card-default">
+                        <div class="card-header">
+                            <h3 class="card-title">Enter information below</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-2">
+                                    <div class="form-group">
+                                        <label>ID</label>
+                                        <input type="text" name="stt" class="form-control" placeholder="ID">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <div class="form-group">
+                                        <label>FullName</label>
+                                        <input type="text" name="name" class="form-control" placeholder="Enter FullName">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="text" name="email" class="form-control" placeholder="Enter email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <div class="form-group">
+                                        <label>Account</label>
+                                        <input type="text" name="account" class="form-control" placeholder="Enter account">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-info">Save</button>
+                                <button type="reset" class="btn btn-default">Reset</button>
+                                <a class="btn btn-default" href="/admin/customers"><i class="fas fa-arrow-alt-circle-left"></i></a>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <%- include('../partial/footer'); %>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<%- include('../partial/script'); %>
+</body>
+</html>

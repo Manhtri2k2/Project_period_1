@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('../partial/heads'); %>
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+    <!-- Navbar -->
+    <%- include('../partial/navbar'); %>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <%- include('../partial/left-menu'); %>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>Category Form</h1>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <!-- /.card -->
+
+                <!-- SELECT2 EXAMPLE -->
+                <form action="/admin/categories/create" method="post">
+                    <div class="card card-default">
+                        <div class="card-header">
+                            <h3 class="card-title">Enter information below</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label>Title</label>
+                                        <input type="text" name="title" class="form-control"
+                                               placeholder="Enter title">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="form-group">
+                                        <label>Description</label>
+                                        <input type="text" name="description" class="form-control"
+                                               placeholder="Enter description">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1">
+                                    <div class="form-group">
+                                        <label>Status</label>
+                                        <input type="number" name="status" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-info">Save</button>
+                                <button type="reset" class="btn btn-default">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <%- include('../partial/footer'); %>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<%- include('../partial/script'); %>
+</body>
+</html>

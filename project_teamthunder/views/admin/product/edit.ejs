@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('../partial/heads'); %>
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+    <!-- Navbar -->
+    <%- include('../partial/navbar'); %>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <%- include('../partial/left-menu'); %>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>Edit Product</h1>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <!-- /.card -->
+
+                <!-- SELECT2 EXAMPLE -->
+                <form action="/admin/products/edit/<%=obj._id%>" method="post">
+                    <div class="card card-default">
+                        <div class="card-header">
+                            <h3 class="card-title">Enter information below</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label>Category</label>
+                                    <select name="categoryId" class="form-control" style="width: 100%;">
+                                        <%
+                                        for(let i = 0; i < listCategory.length; i++) {
+                                        %>
+                                            <option value="<%= listCategory[i]._id%>"><%= listCategory[i].title%></option>
+                                        <%
+                                        }
+                                        %>
+                                    </select>
+                                </div>
+                            </div>
+<!--                            <div class="row">-->
+<!--                                <div class="col-6">-->
+<!--                                    <div class="form-group">-->
+<!--                                        <label>Thumbnail</label>-->
+<!--                                        <div class="custom-file">-->
+<!--                                            <input type="file" class="custom-file-input" name="image">-->
+<!--                                            <input type="hidden" name="thumbnail">-->
+<!--                                            <label class="custom-file-label" for="customFile">Choose file</label>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-6">-->
+<!--                                    <div class="form-group">-->
+<!--                                        <img src="http://res.cloudinary.com/hungkito20/image/upload/c_pad,w_100/<%= obj.thumbnail %>"> > <img class="img-thumbnail" style="width: 100px" id="image-preview">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-4">-->
+<!--                                    <div class="form-group">-->
+<!--                                        <label>Name</label>-->
+<!--                                        <input type="text" name="name" class="form-control" placeholder="Enter Name" value="<%=obj.name%>">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-2">-->
+<!--                                    <div class="form-group">-->
+<!--                                        <label>Price</label>-->
+<!--                                        <input type="number" name="price" class="form-control" placeholder="Enter price" value="<%=obj.price%>">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            &lt;!&ndash; /.card-body &ndash;&gt;-->
+<!--                            <div class="card-footer">-->
+<!--                                <button type="submit" class="btn btn-info">Save</button>-->
+<!--                                <button type="reset" class="btn btn-default">Reset</button>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash; /.card &ndash;&gt;-->
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label>Name</label>
+                                            <input type="text" name="name" class="form-control" placeholder="Enter Name" value="<%=obj.name%>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <div class="form-group">
+                                            <label>Price</label>
+                                            <input type="text" name="price" class="form-control" placeholder="Enter price" value="<%=obj.price%>" >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="form-group">
+                                            <label>Description</label>
+                                            <textarea name="description" cols="8" rows="4" class="form-control" placeholder="Enter description"><%=obj.description%></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label>Detail</label>
+                                            <textarea name="detail" class="textarea" placeholder="Enter product detail "
+                                                      style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><%-obj.detail%></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Thumbnail</label>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" name="image">
+                                                <input type="hidden" name="thumbnail">
+                                                <label class="custom-file-label" for="customFile">Choose file</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <img src="http://res.cloudinary.com/hungkito20/image/upload/c_pad,w_100/<%= obj.thumbnail %>"> > <img class="img-thumbnail" style="width: 100px" id="image-preview">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Key Feature</label>
+                                            <textarea class="form-control" name="key_feature"><%=obj.key_feature%></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label>Applicable Room Area</label>
+                                            <input type="text" class="form-control" name="applicable_room_area" value="<%=obj.applicable_room_area%>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label>Weight(Kg)</label>
+                                            <input type="text" class="form-control" name="weight" value="<%=obj.weight%>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label>Dimensions(mm)</label>
+                                            <input type="text" class="form-control" name="dimensions" value="<%=obj.dimensions%>">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Document link</label>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" name="documentLink" value="<%=obj.document_link%>">
+                                                <input type="hidden" name="document_link">
+                                                <a target="_blank" href="" id="file-link"></a>
+                                                <label class="custom-file-label" for="customFile">Choose file</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <div class="form-group">
+                                            <label>Status</label>
+                                            <select name="status" id="" class="form-control" >
+                                                <option value="1" selected>Active</option>
+                                                <option value="0">Deactive</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-info">Save</button>
+                                    <button type="reset" class="btn btn-default">Reset</button>
+                                </div>
+                            </div>
+                            <!-- /.card -->
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <%- include('../partial/footer'); %>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<%- include('../partial/script'); %>
+<script>
+    const cloudName = 'hungkito20';
+    const unsignedUploadPreset = 'wpmuswhp';
+
+    var img = document.querySelector('[name="image"]');
+
+    img.onchange = function () {
+        var file = this.files[0];
+        var url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`;
+
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var responseDataJson = JSON.parse(this.responseText);
+                console.log(responseDataJson);
+                var imageUrl = document.querySelector('input[name="thumbnail"]');
+                imageUrl.value = responseDataJson.public_id;
+                document.getElementById('image-preview').src = responseDataJson.url;
+            }
+        }
+        xhr.open('POST', url, true);
+        var fd = new FormData();
+        fd.append('upload_preset', unsignedUploadPreset);
+        fd.append('tags', 'browser_upload');
+        fd.append('file', file);
+        xhr.send(fd);
+    }
+</script>
+</body>
+</html>

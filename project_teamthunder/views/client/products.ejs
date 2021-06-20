@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cosy Airconditioners - Products</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon - Copy.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navfooter.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+    <script src=js/bootstrap.min.js"></script>
+    <script src="jquery-match-height-master/jquery.matchHeight.js" type="text/javascript"></script>
+</head>
+<body>
+<script>
+    $(function () {
+        $('.brands-product .product-items p').matchHeight({
+            byRow: true,
+            property: 'height',
+            target: null,
+            remove: false
+        });
+    });
+</script>
+<nav class="navbar navbar-default navigator fixme">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo" href="#"><img src="images/logo.png" alt=""></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="brands">Brands</a></li>
+                <li><a href="products">Products</a></li>
+                <li><a href="news">News</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                <div id="t2"><i class="fa fa-search"></i></div>
+            </form>
+        </div>
+    </div>
+</nav>
+<!-- Products page -->
+<div id="brand-wrapper" class="product clearfix">
+    <img src="images/banner15.jpg" alt="">
+    <div class="brand-intro">
+        <div class="container" id="products">
+            <div class="brand-img">
+                <div id="text">
+                    <h3>Products</h3>
+                    <p>Life is getting cooler with Cosy Airconditioners</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="products-row">
+        <div id="switch-bar">
+            <div id="switch-bar-actype">
+                <h4>AC Type</h4>
+                <ul id="type">
+                    <li>
+                        <input type="checkbox" class="type" name="actype" value="split" id="split">
+                        <label for="split">Split</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="type" name="actype" value="packaged" id="packaged">
+                        <label for="packaged">Packaged</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="type" name="actype" value="system" id="system">
+                        <label for="system">System</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="type" name="actype" value="airpu" id="airpu">
+                        <label for="airpu">Air purifier</label>
+                    </li>
+                </ul>
+            </div>
+            <div id="switch-bar-brands">
+                <h4>Brands</h4>
+                <ul id="brands">
+                    <li>
+                        <input type="checkbox" class="brands" name="brand" value="daikin" id="daikin">
+                        <label for="daikin"><img src="images/logo-daikin.png" alt=""></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="brands" name="brand" value="lg" id="lg">
+                        <label for="lg"><img src="images/logo-lg.png" alt=""></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="brands" name="brand" value="mitsubishi" id="mitsubishi">
+                        <label for="mitsubishi"><img src="images/logo-mitsubishi.png" alt=""></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="brands" name="brand" value="panasonic" id="panasonic">
+                        <label for="panasonic"><img src="images/logo-panasonic.png" alt=""></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="brands" name="brand" value="samsung" id="samsung">
+                        <label for="samsung"><img src="images/logo-samsung.png" alt=""></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="brands" name="brand" value="toshiba" id="toshiba">
+                        <label for="toshiba"><img src="images/logo-toshiba.png" alt=""></label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="brands-product" id="all-item">
+            <p style="display: none;">Products not found</p>
+
+                <% for(var i = 0; i < data.length; i++){
+                %>
+                <div class="product-items">
+                    <a href="/products/<%= data[i]._id%>">
+                        <img src="http://res.cloudinary.com/hungkito20/image/upload/c_pad/<%= data[i].thumbnail %>" alt="">
+                        <p><%= data[i].name %></p>
+                        <span>$ <%= data[i].price %></span>
+                        <div class="review_product star">
+                            <span class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </span>
+                            <div class="line_break">|</div>
+                            <div class="reviewCount">0 reviews</div>
+                        </div>
+                    </a>
+                </div>
+                <%
+                }
+                %>
+
+        </div>
+    </div>
+</div>
+
+<!-- End Products -->
+<!--footer-->
+<div class="footer">
+    <div id="right">
+        <ul id="need">
+            <li><a href="about">About</a></li>
+            <li><a href="support">Support</a></li>
+            <li><a href="sitemap">Sitemap</a></li>
+        </ul>
+        <ul>
+            <li>Follow us:</li>
+            <li><a href="https://www.facebook.com/Cosy-Airconditioners-1853628548262417/"><img src="images/facebook.png"
+                                                                                               alt=""></a></li>
+            <li><a href="https://www.youtube.com/channel/UCmd_JINRBhK_ikwHaaTIoSA"><img src="images/youtube.png" alt=""></a>
+            </li>
+            <li><a href="https://twitter.com/cosyairconditi1"><img src="images/twitter.png" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="copyright" id="left">
+        <p>COSY AIRCONDITIONERS</p>
+        <p>Copyrights © 2021. All Rights Reserved</p>
+    </div>
+</div>
+</body>
+<script src="js/scrollnav.js"></script>
+<script>
+    $(document).ready(function () {
+        var str = window.location.href;
+        var res = str.split("?");
+        res = res[1];
+        if (typeof res !== 'undefined' && res !== 'all-item') {
+            $('#switch-bar #' + res).attr('checked', true);
+            var type, brands;
+            $('#switch-bar .type:checked').each(function () {
+                type = $(this).val();
+            });
+            $('#switch-bar .brands:checked').each(function () {
+                brands = $(this).val();
+            });
+            if ($('#switch-bar #' + type).prop('checked') && $('#switch-bar #' + brands).prop('checked')) {
+                $('.product-items').hide();
+                $('.' + type + '.' + brands).show();
+            } else {
+                $('.product-items').hide();
+                $('.' + type).show();
+                $('.' + brands).show();
+            }
+        }
+    });
+    $("#switch-bar #type li :checkbox").click(function () {
+        $("#switch-bar #type li :checkbox").prop('checked', false);
+        $(this).prop('checked', true);
+    });
+    $("#switch-bar #brands li :checkbox").click(function () {
+        $("#switch-bar #brands li :checkbox").prop('checked', false);
+        $(this).prop('checked', true);
+    });
+    $('#switch-bar ul li').click(function () {
+        // if ($('#switch-bar .type').prop('checked') || $('#switch-bar .brands').prop('checked')) {
+        // 	$('#switch-bar .type').attr('checked', false);
+        // 	$('#switch-bar .brands').attr('checked', false);
+        // }
+        $('.product-items').hide();
+        $('#all-item>p').show();
+        var type, brands;
+        $('#switch-bar .type:checked').each(function () {
+            type = $(this).val();
+        });
+        $('#switch-bar .brands:checked').each(function () {
+            brands = $(this).val();
+        });
+        if ($('#switch-bar #' + type).prop('checked') && $('#switch-bar #' + brands).prop('checked')) {
+            $('#all-item>p').hide();
+            if ($('.' + type + '.' + brands).length) {
+                $('.' + type + '.' + brands).show($('#all-item>p').hide());
+            } else {
+                $('#all-item>p').show();
+            }
+        } else {
+            $('.' + type).show($('#all-item>p').hide());
+            $('.' + brands).show($('#all-item>p').hide());
+        }
+    });
+</script>
+</html>

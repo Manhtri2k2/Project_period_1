@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/admin/style.css">
+    <%- include('../partial/heads'); %>
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+    <!-- Navbar -->
+    <%- include('../partial/navbar'); %>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <%- include('../partial/left-menu'); %>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>List Category</h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="/admin">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/admin/orders">Order</a></li>
+                            <li class="breadcrumb-item"><a href="/admin/customers">Customer</a></li>
+                            <li class="breadcrumb-item"><a href="/admin/products">Product</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <!-- SELECT2 EXAMPLE -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6"></div>
+                                        <div class="col-sm-12 col-md-6"></div>
+                                    </div>
+                                    <div class="row">
+                                        <button type="submit" class="btn btn-info" style="margin-left: 10px">
+                                            <a href="/admin/categories/create" style="color: white">CreateNew</a>
+                                        </button>
+                                        <div class="col-sm-12">
+                                            <table id="example2" class="table table-bordered table-hover dataTable"
+                                                   role="grid" aria-describedby="example2_info">
+                                                <thead>
+                                                <tr role="row">
+                                                    <th class="sorting text-center" tabindex="0"
+                                                        aria-controls="example2"
+                                                        rowspan="1" colspan="1">
+                                                        Name
+                                                    </th>
+                                                    <th class="sorting text-center" tabindex="0"
+                                                        aria-controls="example2"
+                                                        rowspan="1" colspan="1">
+                                                        description
+                                                    </th>
+                                                    <th class="sorting text-center" tabindex="0"
+                                                        aria-controls="example2"
+                                                        rowspan="1" colspan="1">
+                                                        status
+                                                    </th>
+                                                    <th class="sorting text-center" tabindex="0"
+                                                        aria-controls="example2"
+                                                        rowspan="1" colspan="1">
+                                                        Action
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <%
+                                                for (let i = 0; i < data.length; i++) {
+                                                %>
+                                                    <tr role="row" class="odd">
+                                                        <td class="text-center">
+                                                            <%= data[i].title %>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <%= data[i].description %>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <%= data[i].status %>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <a href="/admin/categories/edit/<%= data[i]._id %>"
+                                                               class="mr-2">
+                                                                <i class="fas fa-edit"></i>
+                                                            </a>
+                                                            <a href="/admin/categories/detail/<%= data[i]._id %>"
+                                                               class="mr-2">
+                                                                <i class="fas fa-info-circle"></i>
+                                                            </a>
+                                                            <a href="/admin/categories/delete/<%= data[i]._id %>"
+                                                               class="mr-2"
+                                                               onclick="return confirm('Are you sure?')">
+                                                                <i class="fas fa-trash-alt"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                <%
+                                                }
+                                                %>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+            <!-- /.card --><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <%- include('../partial/footer'); %>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<%- include('../partial/script'); %>
+</body>
+</html>

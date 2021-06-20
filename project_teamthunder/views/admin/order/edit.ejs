@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('../partial/heads'); %>
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+    <!-- Navbar -->
+    <%- include('../partial/navbar'); %>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <%- include('../partial/left-menu'); %>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>Edit <Order></Order></h1>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <!-- /.card -->
+
+                <!-- SELECT2 EXAMPLE -->
+                <form action="/admin/orders/edit/<%=obj._id%>" method="post">
+                    <div class="card card-default">
+                        <div class="card-header">
+                            <h3 class="card-title">Enter information below</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-1">
+                                    <div class="form-group">
+                                        <label>STT</label>
+                                        <input type="number" name="stt" class="form-control" value="<%=obj.stt%>">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <div class="form-group">
+                                        <label>Customer</label>
+                                        <input type="text" name="customer" class="form-control" placeholder="Enter name" value="<%=obj.customer%>">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <div class="form-group">
+                                        <label>Product</label>
+                                        <input type="text" name="product" class="form-control" placeholder="Enter name" value="<%=obj.product%>">
+                                    </div>
+                                </div>
+                                <div class="col-1">
+                                    <div class="form-group">
+                                        <label>Price</label>
+                                        <input type="number" name="price" class="form-control" value="<%=obj.price%>">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <div class="form-group">
+                                        <label>Time</label>
+                                        <input type="date" name="time" class="form-control" placeholder="Enter account" value="<%=obj.time%>">
+                                    </div>
+                                </div>
+                                <div class="col-1">
+                                    <div class="form-group">
+                                        <label>Amount</label>
+                                        <input type="number" name="amount" class="form-control" value="<%=obj.amount%>">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-info">Save</button>
+                                <button type="reset" class="btn btn-default">Reset</button>
+                                <a class="btn btn-default" href="/admin/orders"><i class="fas fa-arrow-alt-circle-left"></i></a>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <%- include('../partial/footer'); %>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<%- include('../partial/script'); %>
+<script>
+    const cloudName = 'hungkito20';
+    const unsignedUploadPreset = 'wpmuswhp';
+
+    var img = document.querySelector('[name="image"]');
+
+    img.onchange = function () {
+        var file = this.files[0];
+        var url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`;
+
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var responseDataJson = JSON.parse(this.responseText);
+                console.log(responseDataJson);
+                var imageUrl = document.querySelector('input[name="thumbnail"]');
+                imageUrl.value = responseDataJson.public_id;
+                document.getElementById('image-preview').src = responseDataJson.url;
+            }
+        }
+        xhr.open('POST', url, true);
+        var fd = new FormData();
+        fd.append('upload_preset', unsignedUploadPreset);
+        fd.append('tags', 'browser_upload');
+        fd.append('file', file);
+        xhr.send(fd);
+    }
+</script>
+</body>
+</html>
